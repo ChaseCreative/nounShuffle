@@ -46,16 +46,16 @@ function gameFourTitle(){return game4Title;}
 
 //Here specific data are loaded
 
-var nounsFirst = [["puell", "girl"], ["ancill", "maid servant"], ["vi", "road"], ["vill", "house"], ["mens", "table"], ["agricol", "farmer"]];
+var nounsFirst = [["puell", "girl"], ["ancill", "maid servant"], ["vi", "road"], ["vill", "house"], ["mens", "table"], ["agricol", "farmer"],["fam", "rumor"], ["fortun", "fortune"], ["naut", "sailor"], ["pecuni", "money"],["poet", "poet"], ["sententi", "opinion"], ["form", "form"],["ir", "anger"], ["patri", "country"], ["port", "gate"],["ros", "rose"], ["vit", "life"]];
 
-var nounsFirstPlural = [["puell", "girls"], ["ancill", "maid servants"], ["vi", "roads"], ["vill", "houses"], ["mens", "tables"], ["agricol", "farmers"]];
+var nounsFirstPlural = [["puell", "girls"], ["ancill", "maid servants"], ["vi", "roads"], ["vill", "houses"], ["mens", "tables"], ["agricol", "farmers"],["fam", "rumors"], ["fortun", "fortunes"], ["naut", "sailors"], ["pecuni", "monies"],["poet", "poets"], ["sententi", "opinions"], ["form", "forms"],["ir", "angers"], ["patri", "countries"], ["port", "gates"],["ros", "roses"], ["vit", "lives"]];
 
 //var verbsFirstPer = [["Amav", "loved"], ["laborav", "worked"], ["habitav", "lived"], ["cogitav", "thought"], ["cantav", "sang"], ["ded", "gave"]];
 
 
-var perEndingsFirst = [["a", "the (Subject) "], ["ae (genitive)", "of the "], ["ae (dative)", "to/for the "], ["am", "the (Direct Object) "], ["ā", "with the "], ["a!", "Oh, "]];
+var perEndingsFirst = [["a", "the (Subject) "], ["ae (genitive)", "of the "], ["ae (dative)", "to/for the "], ["am", "the (Direct Object) "], ["ā", "by/with/in/from the "], ["a!", "Oh, "]];
 
-var perEndingsFirstPlural = [["ae", "the (Subject) "], ["ārum", "of the "], ["īs (dative)", "to/for the "], ["ās", "the (Direct Object) "], ["īs", "with the "], ["ae!", "Oh, "]];
+var perEndingsFirstPlural = [["ae", "the (Subject) "], ["ārum", "of the "], ["īs (dative)", "to/for the "], ["ās", "the (Direct Object) "], ["īs", "by/with/in/from the "], ["ae!", "Oh, "]];
 
 //var perEndingsFirstImp = [["ābam", "I was "], ["ābas", "You were "], ["ābat", "She/he/it was "], ["ābamus", "We were "], ["ābatis", "Ya'll were "], ["ābant", "They were "]];
 
@@ -97,7 +97,7 @@ function wrongAnswerAudio(){
 
     var pointsPerCorrectAnswer = 10;
 
-     
+
 
 //Function for adding and subtracting points based on correct or wrong answers
 
@@ -346,7 +346,7 @@ document.getElementById(answers[3]).innerHTML = perEndingsFirst[3][1] + nounsFir
 
 		count = 11;
 
-		  
+
     }
 
 
@@ -588,7 +588,7 @@ mixUp[randomNounIndex]();
 
 		count = 11;
 
-		  
+
     }
 
 
