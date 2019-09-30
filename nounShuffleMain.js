@@ -17,7 +17,7 @@ function get(x){
     var game1Title = get("answerOne").innerHTML = "Singularly Funny Forms and Functions (FaF)";
     var game2Title = get("answerTwo").innerHTML = "Pleasantly Plural FaF!";
     var game3Title = get("answerThree").innerHTML = "Are You Ready to Mix it Up!";
-    var game4Title = get("answerFour").innerHTML = "";
+    var game4Title = get("answerFour").innerHTML = "I want Seconds and Thirds!";
 
 
 //This sets up the name of the app and four seoparate games
@@ -53,13 +53,29 @@ var nounsFirstPlural = [["puell", "girls"], ["ancill", "maid servants"], ["vi", 
 //var verbsFirstPer = [["Amav", "loved"], ["laborav", "worked"], ["habitav", "lived"], ["cogitav", "thought"], ["cantav", "sang"], ["ded", "gave"]];
 
 
-var perEndingsFirst = [["a", "the (Subject) "], ["ae (genitive)", "of the "], ["ae (dative)", "to/for the "], ["am", "the (Direct Object) "], ["ā", "by/with/in/from the "], ["a!", "Oh, "]];
+var perEndingsFirst = [["a", "the (Subject) "], ["ae (Genitive)", "of the "], ["ae (Dative)", "to/for the "], ["am", "the (Direct Object) "], ["ā", "by/with/in/from the "], ["a!", "Oh, "]];
 
-var perEndingsFirstPlural = [["ae", "the (Subject) "], ["ārum", "of the "], ["īs (dative)", "to/for the "], ["ās", "the (Direct Object) "], ["īs", "by/with/in/from the "], ["ae!", "Oh, "]];
+var perEndingsFirstPlural = [["ae", "the (Subject) "], ["ārum", "of the "], ["īs (Dative)", "to/for the "], ["ās", "the (Direct Object) "], ["īs", "by/with/in/from the "], ["ae!", "Oh, "]];
 
 //var perEndingsFirstImp = [["ābam", "I was "], ["ābas", "You were "], ["ābat", "She/he/it was "], ["ābamus", "We were "], ["ābatis", "Ya'll were "], ["ābant", "They were "]];
 
 //var perEndingsFirstPerfect = [["ī", "I "], ["isti", "You "], ["it", "She/he/it "], ["imus", "We "], ["istis", "Ya'll "], ["ērunt", "They "]];
+var nounsSecond = [["serv", "servant"], ["hort", "garden"], ["lect", "couch"], ["coqu", "cook"], ["cerv", "deer"],["cib", "food"], ["anul", "ring"], ["domin", "master"], ["candidat", "candidate"],["lup", "wolf"]];
+
+var perEndingsSecond = [["us", "the (Subject) "], ["ī (genitive)", "of the "], ["ō (dative)", "to/for the "], ["um", "the (Direct Object) "], ["ō (ablative)", "by/with/in/from the "], ["e!", "Oh, "]];
+
+var nounsSecondIus = [["argentari", "banker"], ["nunti", "messenger"], ["fili", "son"],["venalici", "slave dealer"]];
+var nounsSecondEr = [["puer", "puer", "boy"], ["liber", "libr", "book"], ["magister", "magistr", "teacher"],["vir", "vir","man"]];
+var perEndingsSecondIusEr = [["us", "the (Subject) "], ["i (genitive)", "of the "], ["ō (dative)", "to/for the "], ["um", "the (Direct Object) "], ["ō (ablative)", "by/with/in/from the "], ["!", "Oh, "]];
+
+var nounsSecondPlural = [["serv", "servants"], ["hort", "gardens"], ["lect", "couches"], ["argentari", "bankers"], ["coqu", "cooks"], ["cerv", "deer"],["cib", "food"], ["anul", "rings"], ["nunti", "messengers"], ["fili", "sons"],["domin", "masters"], ["venalici", "slave dealers"], ["candidat", "candidates"],["lup", "wolves"]];
+var perEndingsSecondPlural = [["ī", "the (Subject) "], ["ōrum ", "of the "], ["īs (dative)", "to/for the "], ["ōs", "the (Direct Object) "], ["īs (ablative)", "by/with/in/from the "], ["ī!", "Oh, "]];
+
+var nounsThird = [["reg", "king"], ["pac", "peace"],["labor", "work"], ["homin", "man"], ["virtut", "virtue"], ["civitat", "state"],, ["can", "dog"], ["mercator", "merchant"], ["patr", "father"], ["matr", "mother"]];
+var perEndingsThird = [["is", "of the "], ["ī ", "to/for the "], ["em", "the "], ["e", "by/with/in/from the "]];
+var perEndingsThirdPlural = [["ēs", "the "], ["um", "of the "], ["ibus ", "to/for the (Dative) "], ["ēs", "the "], ["ibus", "by/with/in/from the (Ablative) "]];
+
+
 
 var answers = ["answerOne", "answerTwo", "answerThree", "answerFour"];
 
@@ -235,7 +251,7 @@ function selectGame3(){
 function selectGame4(){
 
 	startButton.disabled = false;
- 	startButton.onclick = function(){verbShuffle()};
+ 	startButton.onclick = function(){allSecondDeclensionNounShuffle()};
  	startButton.innerHTML = "Click to Start " + game4Title;
     answerSetup();
     gameOverAudio();
@@ -495,17 +511,17 @@ shuffle(answers);
 
 
 function shuffleFirstDeclensionNouns(){
-document.getElementById("startButton").innerHTML =  nounsFirst[0][0]  + perEndingsFirst[0][0] ;
+document.getElementById("startButton").innerHTML =  nounsFirst[0][0]  + perEndingsFirst[0][0];
 
 
-document.getElementById(answers[0]).innerHTML = perEndingsFirst[0][1] + nounsFirst[0][1]  ;
+document.getElementById(answers[0]).innerHTML = perEndingsFirst[0][1] + nounsFirst[0][1];
 
 
-document.getElementById(answers[1]).innerHTML = perEndingsFirst[1][1] + nounsFirst[0][1]  ;
+document.getElementById(answers[1]).innerHTML = perEndingsFirst[1][1] + nounsFirst[0][1];
 
-document.getElementById(answers[2]).innerHTML = perEndingsFirst[2][1] + nounsFirst[0][1]  ;
+document.getElementById(answers[2]).innerHTML = perEndingsFirst[2][1] + nounsFirst[0][1];
 
-document.getElementById(answers[3]).innerHTML = perEndingsFirst[3][1] + nounsFirst[0][1]  ;
+document.getElementById(answers[3]).innerHTML = perEndingsFirst[3][1] + nounsFirst[0][1];
 }
 
 
@@ -514,14 +530,14 @@ function shuffleFirstDeclensionPluralNouns(){
 document.getElementById("startButton").innerHTML =  nounsFirstPlural[0][0]  + perEndingsFirstPlural[0][0] ;
 
 
-document.getElementById(answers[0]).innerHTML = perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]  ;
+document.getElementById(answers[0]).innerHTML = perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1] + " ";
 
 
-document.getElementById(answers[1]).innerHTML = perEndingsFirstPlural[1][1] + nounsFirstPlural[0][1]  ;
+document.getElementById(answers[1]).innerHTML = perEndingsFirstPlural[1][1] + nounsFirstPlural[0][1] + " ";
 
-document.getElementById(answers[2]).innerHTML = perEndingsFirstPlural[2][1] + nounsFirstPlural[0][1]  ;
+document.getElementById(answers[2]).innerHTML = perEndingsFirstPlural[2][1] + nounsFirstPlural[0][1] + " ";
 
-document.getElementById(answers[3]).innerHTML = perEndingsFirstPlural[3][1] + nounsFirstPlural[0][1]  ;
+document.getElementById(answers[3]).innerHTML = perEndingsFirstPlural[3][1] + nounsFirstPlural[0][1] + " ";
 }
 
 
@@ -598,6 +614,166 @@ mixUp[randomNounIndex]();
 
 
 
+function allSecondDeclensionNounShuffle(){
+
+
+countDownTimer();
+	timeleft = 15;
+	countdown = setInterval(countDownTimer,1000);
+
+
+startButton.disabled = true;
+
+shuffle(nounsSecondIus);
+shuffle(perEndingsSecondIusEr);
+
+shuffle(nounsSecond);
+shuffle(perEndingsSecond);
+//shuffle(nounsFirst);
+//shuffle(perEndingsFirst);
+
+shuffle(nounsFirstPlural);
+shuffle(perEndingsFirstPlural);
+
+shuffle(nounsThird);
+shuffle(perEndingsThird);
+
+shuffle(answers);
+
+
+
+
+
+function shuffleSecondDeclensionNouns(){
+document.getElementById("startButton").innerHTML =  nounsSecond[0][0]  + perEndingsSecond[0][0];
+
+
+document.getElementById(answers[0]).innerHTML = perEndingsSecond[0][1] + nounsSecond[0][1];
+
+
+document.getElementById(answers[1]).innerHTML = perEndingsSecond[1][1] + nounsSecond[0][1];
+
+document.getElementById(answers[2]).innerHTML = perEndingsSecond[2][1] + nounsSecond[0][1];
+
+document.getElementById(answers[3]).innerHTML = perEndingsSecond[3][1] + nounsSecond[0][1];
+}
+
+
+
+function shuffleSecondDeclensionPluralNouns(){
+document.getElementById("startButton").innerHTML =  nounsSecondPlural[0][0]  + perEndingsSecondPlural[0][0];
+
+
+document.getElementById(answers[0]).innerHTML = perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1];
+
+
+document.getElementById(answers[1]).innerHTML = perEndingsSecondPlural[1][1] + nounsSecondPlural[0][1];
+
+document.getElementById(answers[2]).innerHTML = perEndingsSecondPlural[2][1] + nounsSecondPlural[0][1];
+
+document.getElementById(answers[3]).innerHTML = perEndingsSecondPlural[3][1] + nounsSecondPlural[0][1];
+}
+
+
+function shuffleSecondDeclensionNounsIus(){
+document.getElementById("startButton").innerHTML =  nounsSecondIus[0][0]  + perEndingsSecondIusEr[0][0];
+
+
+document.getElementById(answers[0]).innerHTML = perEndingsSecondIusEr[0][1] + nounsSecondIus[0][1];
+
+
+document.getElementById(answers[1]).innerHTML = perEndingsSecondIusEr[1][1] + nounsSecondIus[0][1];
+
+document.getElementById(answers[2]).innerHTML = perEndingsSecondIusEr[2][1] + nounsSecondIus[0][1];
+
+document.getElementById(answers[3]).innerHTML = perEndingsSecondIusEr[3][1] + nounsSecondIus[0][1];
+}
+
+function shuffleThirdDeclensionNouns(){
+document.getElementById("startButton").innerHTML =  nounsThird[0][0]  + perEndingsThird[0][0];
+
+
+document.getElementById(answers[0]).innerHTML = perEndingsThird[0][1] + nounsThird[0][1];
+
+
+document.getElementById(answers[1]).innerHTML = perEndingsThird[1][1] + nounsThird[0][1];
+
+document.getElementById(answers[2]).innerHTML = perEndingsThird[2][1] + nounsThird[0][1];
+
+document.getElementById(answers[3]).innerHTML = perEndingsThird[3][1] + nounsThird[0][1];
+}
+
+
+var randomNounIndex = Math.floor(Math.random() * 4);
+var mixUp = [shuffleSecondDeclensionNouns,shuffleSecondDeclensionPluralNouns,shuffleSecondDeclensionNounsIus,shuffleThirdDeclensionNouns];
+
+mixUp[randomNounIndex]();
+
+
+
+
+
+
+
+
+	resetAnswerColors();
+
+     enableButtons();
+
+
+
+     //responseButton.innerHTML = "Hint!";
+
+     //responseButton.disabled = false;
+
+
+     //if (answerOne.value == "1") {document.getElementById("boxTwo").innerHTML = "HI!");}
+
+
+     //var newArray = shuffle(questions);
+
+ 	decrementCount();
+
+
+
+
+
+
+	if (count == 0){
+
+		gameOverAudio();
+
+		startButton.innerHTML = "Select a New Game!";
+
+
+
+
+		answerOne.innerHTML = game1Title;
+		answerTwo.innerHTML = game2Title;
+		answerThree.innerHTML = game3Title;
+		answerFour.innerHTML = game4Title;
+
+		document.getElementById("boxThree").innerHTML = "Score";
+		responseButton.innerHTML = "You earned " + points + " points!";
+		points = 0;
+
+		stopTimer();
+		document.getElementById("boxOne").innerHTML = "Timer";
+
+		answerOne.onclick = function(){selectGame1()};
+		answerTwo.onclick = function(){selectGame2()};
+		answerThree.onclick = function(){selectGame3()};
+		answerFour.onclick = function(){selectGame4()};
+
+		count = 11;
+
+
+    }
+
+
+
+}
+
 
 
 
@@ -656,7 +832,11 @@ function clickedAnswerOne(){
 
 
 	if (document.getElementById("answerOne").innerHTML == perEndingsFirst[0][1] + nounsFirst[0][1] ||
-		document.getElementById("answerOne").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]){
+		document.getElementById("answerOne").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]+ " "||
+    document.getElementById("answerOne").innerHTML == perEndingsSecond[0][1] + nounsSecond[0][1]||
+    document.getElementById("answerOne").innerHTML == perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1]||
+    document.getElementById("answerOne").innerHTML == perEndingsSecondIusEr[0][1] + nounsSecondIus[0][1]||
+    document.getElementById("answerOne").innerHTML == perEndingsThird[0][1] + nounsThird[0][1]){
 
 		correctAnswerAudio();
 		//clickedCorrectAnswerOneAudio ();
@@ -705,7 +885,11 @@ function clickedAnswerTwo(){
 
 
 	if (document.getElementById("answerTwo").innerHTML == perEndingsFirst[0][1] + nounsFirst[0][1]||
-		document.getElementById("answerTwo").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]){
+		document.getElementById("answerTwo").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]+ " "||
+    document.getElementById("answerTwo").innerHTML == perEndingsSecond[0][1] + nounsSecond[0][1]||
+    document.getElementById("answerTwo").innerHTML == perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1]||
+    document.getElementById("answerTwo").innerHTML == perEndingsSecondIusEr[0][1] + nounsSecondIus[0][1]||
+    document.getElementById("answerTwo").innerHTML == perEndingsThird[0][1] + nounsThird[0][1]){
 
 		correctAnswerAudio();
 		//clickedCorrectAnswerTwoAudio();
@@ -751,7 +935,11 @@ function clickedAnswerThree(){
 
 
 	if (document.getElementById("answerThree").innerHTML == perEndingsFirst[0][1] + nounsFirst[0][1]||
-		document.getElementById("answerThree").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]){
+		document.getElementById("answerThree").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1] + " "||
+    document.getElementById("answerThree").innerHTML == perEndingsSecond[0][1] + nounsSecond[0][1]||
+    document.getElementById("answerThree").innerHTML == perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1]||
+    document.getElementById("answerThree").innerHTML == perEndingsSecondIusEr[0][1] + nounsSecondIus[0][1]||
+    document.getElementById("answerThree").innerHTML == perEndingsThird[0][1] + nounsThird[0][1]){
 
 		correctAnswerAudio();
 		//clickedCorrectAnswerThreeAudio();
@@ -798,7 +986,11 @@ function clickedAnswerFour(){
 
 
 	if (document.getElementById("answerFour").innerHTML == perEndingsFirst[0][1] + nounsFirst[0][1]||
-		document.getElementById("answerFour").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]){
+		document.getElementById("answerFour").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1] + " "||
+    document.getElementById("answerFour").innerHTML == perEndingsSecond[0][1] + nounsSecond[0][1]||
+    document.getElementById("answerFour").innerHTML == perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1]||
+    document.getElementById("answerFour").innerHTML == perEndingsSecondIusEr[0][1] + nounsSecondIus[0][1]||
+    document.getElementById("answerFour").innerHTML == perEndingsThird[0][1] + nounsThird[0][1]){
 
 		correctAnswerAudio();
 		//clickedCorrectAnswerFourAudio;
