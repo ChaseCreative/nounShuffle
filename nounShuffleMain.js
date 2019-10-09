@@ -55,7 +55,7 @@ var nounsFirstPlural = [["puell", "girls"], ["ancill", "maid servants"], ["vi", 
 
 var perEndingsFirst = [["a", "the (Subject) "], ["ae (Genitive)", "of the "], ["ae (Dative)", "to/for the "], ["am", "the (Direct Object) "], ["ā", "by/with/in/from the "], ["a!", "Oh, "]];
 
-var perEndingsFirstPlural = [["ae", "the (Subject) "], ["ārum", "of the "], ["īs (Dative)", "to/for the "], ["ās", "the (Direct Object) "], ["īs", "by/with/in/from the "], ["ae!", "Oh, "]];
+var perEndingsFirstPlural = [["ae", "the (Subject) "], ["ārum", "of the "], ["īs (Dative)", "to/for the "], ["ās", "the (Direct Object) "], ["īs (Ablative)", "by/with/in/from the "], ["ae!", "Oh, "]];
 
 //var perEndingsFirstImp = [["ābam", "I was "], ["ābas", "You were "], ["ābat", "She/he/it was "], ["ābamus", "We were "], ["ābatis", "Ya'll were "], ["ābant", "They were "]];
 
@@ -71,7 +71,7 @@ var perEndingsSecondIusEr = [["us", "the (Subject) "], ["i (genitive)", "of the 
 var nounsSecondPlural = [["serv", "servants"], ["hort", "gardens"], ["lect", "couches"], ["argentari", "bankers"], ["coqu", "cooks"], ["cerv", "deer"],["cib", "food"], ["anul", "rings"], ["nunti", "messengers"], ["fili", "sons"],["domin", "masters"], ["venalici", "slave dealers"], ["candidat", "candidates"],["lup", "wolves"]];
 var perEndingsSecondPlural = [["ī", "the (Subject) "], ["ōrum ", "of the "], ["īs (dative)", "to/for the "], ["ōs", "the (Direct Object) "], ["īs (ablative)", "by/with/in/from the "], ["ī!", "Oh, "]];
 
-var nounsThird = [["reg", "king"], ["pac", "peace"],["labor", "work"], ["homin", "man"], ["virtut", "virtue"], ["civitat", "state"],, ["can", "dog"], ["mercator", "merchant"], ["patr", "father"], ["matr", "mother"]];
+var nounsThird = [["reg", "king"], ["pac", "peace"],["labor", "work"], ["homin", "man"], ["virtut", "virtue"], ["civitat", "state"], ["can", "dog"], ["mercator", "merchant"], ["patr", "father"], ["matr", "mother"]];
 var perEndingsThird = [["is", "of the "], ["ī ", "to/for the "], ["em", "the "], ["e", "by/with/in/from the "]];
 var perEndingsThirdPlural = [["ēs", "the "], ["um", "of the "], ["ibus ", "to/for the (Dative) "], ["ēs", "the "], ["ibus", "by/with/in/from the (Ablative) "]];
 
@@ -832,6 +832,7 @@ function clickedAnswerOne(){
 
 
 	if (document.getElementById("answerOne").innerHTML == perEndingsFirst[0][1] + nounsFirst[0][1] ||
+    document.getElementById("answerOne").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]||
 		document.getElementById("answerOne").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]+ " "||
     document.getElementById("answerOne").innerHTML == perEndingsSecond[0][1] + nounsSecond[0][1]||
     document.getElementById("answerOne").innerHTML == perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1]||
@@ -885,6 +886,7 @@ function clickedAnswerTwo(){
 
 
 	if (document.getElementById("answerTwo").innerHTML == perEndingsFirst[0][1] + nounsFirst[0][1]||
+    document.getElementById("answerTwo").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]||
 		document.getElementById("answerTwo").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]+ " "||
     document.getElementById("answerTwo").innerHTML == perEndingsSecond[0][1] + nounsSecond[0][1]||
     document.getElementById("answerTwo").innerHTML == perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1]||
@@ -935,6 +937,7 @@ function clickedAnswerThree(){
 
 
 	if (document.getElementById("answerThree").innerHTML == perEndingsFirst[0][1] + nounsFirst[0][1]||
+    document.getElementById("answerThree").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]||
 		document.getElementById("answerThree").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1] + " "||
     document.getElementById("answerThree").innerHTML == perEndingsSecond[0][1] + nounsSecond[0][1]||
     document.getElementById("answerThree").innerHTML == perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1]||
@@ -986,6 +989,7 @@ function clickedAnswerFour(){
 
 
 	if (document.getElementById("answerFour").innerHTML == perEndingsFirst[0][1] + nounsFirst[0][1]||
+    document.getElementById("answerFour").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1]||
 		document.getElementById("answerFour").innerHTML == perEndingsFirstPlural[0][1] + nounsFirstPlural[0][1] + " "||
     document.getElementById("answerFour").innerHTML == perEndingsSecond[0][1] + nounsSecond[0][1]||
     document.getElementById("answerFour").innerHTML == perEndingsSecondPlural[0][1] + nounsSecondPlural[0][1]||
